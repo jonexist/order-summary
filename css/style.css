@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Red Hat Display', sans-serif;
+}
+:root {
+/** Primary **/
+--pale-blue: hsl(225, 100%, 94%);
+--bright-blue: hsl(245, 75%, 52%);
+/** Neutral **/
+--very-pale-blue: hsl(225, 100%, 98%);
+--desaturated-blue: hsl(224, 23%, 55%);
+--dark-blue: hsl(223, 47%, 23%);
+}
+body {
+  font-size: 16px;
+  background: var(--pale-blue);
+  position: relative;
+}
+.waves {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.waves2 {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  display: none;
+}
+img {
+  max-width: 100%;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh - 1px);
+  width: 100%;
+}
+.container img {
+  border-radius: 0.625rem 0.625rem 0 0;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: white;
+  width: 450px;
+  padding: 1rem;
+  border-radius: 0 0 0.625rem 0.625rem;
+}
+.intro h1 {
+  color: var(--dark-blue);
+  text-align: center;
+  line-height: 2.5;
+  font-size: 1.7rem;
+  font-weight: 900;
+}
+.intro p {
+  color: var(--desaturated-blue);
+  padding: 0 2rem;
+  text-align: center;
+  font-weight: 500;
+}
+.pricing {
+  margin: 1rem auto;
+  background: var(--very-pale-blue);
+  width: 85%;
+  border-radius: 0.625rem;
+  padding: 1.5rem 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pricing .btn-1 {
+  border: none;
+  background: transparent;
+  text-decoration: underline;
+  color: var(--bright-blue);
+  font-weight: 900;
+  cursor: pointer;
+}
+.pricing .btn-1:hover {
+  color: hsl(244, 43%, 62%);
+  text-decoration: none;
+  transition: color 5ms 0s ease;
+}
+.plan {
+  display: flex;
+  align-items: center;
+}
+.description h4 {
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+.description p {
+  color: var(--desaturated-blue);
+  font-weight: 500;
+}
+.plan img {
+  margin-right: 0.8rem;
+}
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.buttons .btn-2 {
+  border: none;
+  border-radius: 0.6rem;
+  width: 80%;
+  padding: 1.2rem 0;
+  color: white;
+  letter-spacing: 0.1em;
+  font-weight: 900;
+  background: var(--bright-blue);
+  margin: 1rem 0;
+  cursor: pointer;
+}
+.buttons .btn-3 {
+  border: none;
+  margin: 1rem 0;
+  background: transparent;
+  font-weight: 900;
+  color: var(--desaturated-blue);
+  cursor: pointer;
+}
+.buttons .btn-2:hover {
+  color: white;
+  background: hsl(244, 43%, 62%);
+  transition: 5ms 0s ease;
+}
+.buttons .btn-3:hover {
+  color: var(--dark-blue);
+  transition: 5ms 0s ease;
+}
+/** Attribution **/
+.attribution {
+  font-size: 11px; 
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/** for mobile devices **/
+@media (max-width: 480px) {
+  
+  .waves {
+    display: none;
+  }
+  .waves2 {
+    display: inherit;
+  }
+  .container img {
+    width: 350px;
+  }
+  .wrapper {
+    width: 350px;
+  }
+  .pricing {
+    padding: 1rem 1rem;
+  }
+  .plan img {
+    width: 50px;
+  }
+
+}
